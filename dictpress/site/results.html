@@ -1,0 +1,37 @@
+{{ define "results" }}
+<ol class="entries">
+    {{ range $k, $r := .Data.Results.Entries }}
+        <li class="entry" data-guid="{{ $r.GUID }}">
+            <header class="head">
+                {{ if $.EnableSubmissions }}
+                    <a href="" data-from="{{ $r.GUID }}" class="edit" title="Suggest edit">✏️</a>
+                {{ end }}
+                <h3 class="title">{{ $r.Content }}</h3>
+                <span class="pronun">♪ {{ JoinStrings $r.Phones "," }}</span>
+            </header>
+
+            <ol class="defs">
+                {{ $prevTypes := "" }}
+                {{ range $k, $d := $r.Relations }}
+                    {{ $types := (JoinStrings $d.RelationTypes ", ") }}
+                    {{ if ne $prevTypes $types }}
+                    <div class="types">
+                        <span>{{ $types }}</span>
+                    </div>
+                    {{ end }}
+                    <li>
+                        <div data-guid="{{ $d.GUID }}" class="def">
+                            {{ $d.Content }}
+
+                            {{ if $.EnableSubmissions }}
+                                <a href="" data-from="{{ $r.GUID }}" data-to="{{ $d.GUID }}" class="edit" title="Suggest edit">✏️</a>
+                            {{ end }}
+                        </div>
+                    </li>
+                    {{ $prevTypes = $types }}
+                {{ end }}
+            </ol>
+        </li>
+    {{ end }}
+</ol>
+{{ end }}
