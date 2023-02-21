@@ -79,5 +79,18 @@ sost = "Sostantivo"       # Noun
 verb = "Verbo"            # Verb
 
 [lang.kannada]
+name ="Kannada"
 tokenzier = "kannada"
 tokenizer_type = "postgres"
+
+
+
+[lang.kannada.types]
+noun= "ನಾಮಪದ"
+adj= "ವಿಶೇಷಣ"
+verb= "ಕ್ರಿಯಾಪದ"
+adv="ಕ್ರಿಯಾವಿಶೇಷಣ"
+conj="ಸಂಯೋಗ"
+
+
+

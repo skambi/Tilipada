@@ -30,9 +30,9 @@
     <header class="header">
       <div class="row">
         <div class="logo four columns">
-          <a href="/"><img src="/static/logo.svg" alt="Dictionary logo" /></a>
+          <a href="/"><img src="/static/logo.png" alt="Dictionary logo" /></a>
           <div class="intro">
-            <p>Welcome to the dictionary website</p>
+            <p style="font-size:30px">ತಿಳಿಪದ ಸಂಗ್ರಹ ಪದಕೋಶಕ್ಕೆ ಸ್ವಾಗತ</p>
           </div>
         </div><!-- logo col -->
 
@@ -51,11 +51,13 @@
 
 {{ define "footer" }}
     <nav class="nav">
-      <a href="/glossary/english/kannada/a">Glossary</a>
+      <a href="/glossary/english/kannada/a">ಪದಸಂಗ್ರಹಣೆ</a>
       {{ if .EnableSubmissions }}
         <a href="/submit">Submit new</a>
       {{ end }}
-      <a href="/pages/about">About</a>
+      <a href="/pages/about">ಪರಿಚಯ</a>
+      
+      <a href="/pages/bibilography">ಗ್ರಂಥಸೂಚಿ</a>
     </nav>
   </div>
   <footer class="footer">
