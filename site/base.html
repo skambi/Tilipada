@@ -24,23 +24,31 @@
 	<link rel="shortcut icon" href="static/favicon.png" type="image/x-icon" />
   <link href="/static/flexit.css" rel="stylesheet" type="text/css" />
   <link href="/static/style.css" rel="stylesheet" type="text/css" />
+  <script src="/static/main.js"></script>
+  <script language="javascript" src="/static/KannadaKeelimane.js"></script>
+  <script language="JavaScript">
+    function inProcess(tarea, tevt) {
+        return kelasaMaadi(tarea, tevt);
+    }
+  </script>
+  
+  <!--<script src="/static/autocomplete.js"></script>-->
 </head>
 <body class="{{ if eq .Data.PageName "/"}}home{{ end }}">
   <div class="container wrap box">
     <header class="header">
       <div class="row">
         <div class="logo four columns">
-          <a href="/"><img src="/static/logo.svg" alt="Dictionary logo" /></a>
+          <a href="/"><img src="/static/logo.png" alt="Dictionary logo" /></a>
           <div class="intro">
-            <p>Welcome to the dictionary website</p>
+            <p style="font-size:30px">ತಿಳಿಪದ ಸಂಗ್ರಹ ಪದಕೋಶಕ್ಕೆ ಸ್ವಾಗತ</p>
           </div>
         </div><!-- logo col -->
 
         <div class="search eight columns">
           <form class="search-form" method="get" action="/dictionary/english/kannada">
             <div>
-              <input autofocus autocomplete="off" required placeholder=""
-                type="text" id="q" name="q" value="{{ if .Data.Query }}{{ .Data.Query.Query }}{{ end }}" />
+              <input autofocus required placeholder="" type="text" id="q" name="q" value="{{ if .Data.Query }}{{ .Data.Query.Query }}{{ end }}" onkeypress="return inProcess(this, event);"/>
               <button type="submit"><img src="/static/search.svg" alt="Search" /></button>
             </div>
           </form>
@@ -51,11 +59,13 @@
 
 {{ define "footer" }}
     <nav class="nav">
-      <a href="/glossary/english/kannada/a">Glossary</a>
+      <a href="/glossary/english/kannada/a">ಪದಸಂಗ್ರಹಣೆ</a>
       {{ if .EnableSubmissions }}
         <a href="/submit">Submit new</a>
       {{ end }}
-      <a href="/pages/about">About</a>
+      <a href="/pages/about">ಪರಿಚಯ</a>
+      
+      <a href="/pages/bibilography">ಗ್ರಂಥಸೂಚಿ</a>
     </nav>
   </div>
   <footer class="footer">

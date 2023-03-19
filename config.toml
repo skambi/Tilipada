@@ -48,9 +48,9 @@ num_page_nums = 10
 [db]
 host = "localhost"
 port = 5432
-db = "akshatha"
-user = "akshatha"
-password = "12345678"
+db = "arime"
+user = "arime_dict_user"
+password = "olageba"
 
 
 [lang.english]
@@ -79,5 +79,18 @@ sost = "Sostantivo"       # Noun
 verb = "Verbo"            # Verb
 
 [lang.kannada]
+name ="Kannada"
 tokenzier = "kannada"
 tokenizer_type = "postgres"
+
+
+
+[lang.kannada.types]
+noun= "ನಾಮಪದ"
+adj= "ವಿಶೇಷಣ"
+verb= "ಕ್ರಿಯಾಪದ"
+adv="ಕ್ರಿಯಾವಿಶೇಷಣ"
+conj="ಸಂಯೋಗ"
+
+
+
