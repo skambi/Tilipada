@@ -1,6 +1,6 @@
 [app]
 # Network address for the server to listen on.
-address = ":9000"
+address = ":8080"
 
 # Admin dashboard and API credentials.
 admin_username = "akshatha"
@@ -8,7 +8,7 @@ admin_password = "12345678"
 
 # The website URL to be used on the frontend pages.
 # Example: yourdictionary.site.com
-root_url = "http://localhost:9000"
+root_url = "http://localhost:8080"
 
 # Enable rendering arbitrary pages from (site_dir/pages/*.html).
 # For instance, "about" for site_dir/pages/about.html will be
@@ -48,9 +48,9 @@ num_page_nums = 10
 [db]
 host = "localhost"
 port = 5432
-db = "arime"
-user = "arime_dict_user"
-password = "olageba"
+db = "postgres"
+user = "postgres"
+password = "postgres"
 
 
 [lang.english]
